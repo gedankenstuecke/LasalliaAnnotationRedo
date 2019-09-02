@@ -81,7 +81,9 @@ for hog in hogs:
             annotations['kegg'] += ko_annotations[species][identifier]
             annotations['pfam'] += pfam_annotations[species][identifier]
 
-    print("{}\t{}\t{}\t{}".format(hog.split("/")[-1],
+    print("{}\t{}\t{}\t{}".format(
+        hog.split("/")[-1],
         ",".join(list(set(annotations['go']))),
         ",".join(list(set(annotations['kegg']))),
-        ",".join(list(set(annotations['pfam'])))))
+        ",".join(list(set(annotations['pfam'])))
+        ))
